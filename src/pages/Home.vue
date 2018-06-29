@@ -8,7 +8,7 @@
 					<div class="tools" @click.prevent="collapse">
 						<i :class="collapsed?'fa fa-indent':'fa fa-dedent'"></i>
 					</div>
-					<a class="sysCls" href="http://www.baidu.com" target="_blank">子系统一</a><a class="sysCls" href="http://www.baidu.com" target="_blank">子系统二</a><a class="sysCls" href="http://www.baidu.com" target="_blank">子系统二</a>
+					<a class="sysCls" href="http://www.baidu.com" target="_blank">ECHO技术</a><a class="sysCls" href="http://www.baidu.com" target="_blank">子系统二</a><a class="sysCls" href="http://www.baidu.com" target="_blank">子系统二</a>
 			</el-col>
 			<el-col :span="4" class="userinfo">
 				<el-dropdown trigger="click">
@@ -80,7 +80,7 @@
 	export default {
 		data() {
 			return {
-				sysName:'GMA',
+				sysName:'众享天下后台',
 				collapsed:false,
 				sysUserName: '',
 				sysUserAvatar: '',

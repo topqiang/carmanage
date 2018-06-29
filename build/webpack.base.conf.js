@@ -11,7 +11,6 @@ var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 
 module.exports = {
-  context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
   },
@@ -21,15 +20,14 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'vue$': 'vue/dist/vue',
-      'src': path.resolve(__dirname, '../src'),
+      '@': path.resolve(__dirname, '../src'),
+      '%': path.resolve(__dirname, '../cash'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components'),
-      '%': resolve('cash'),
-      '@': resolve('src'),
+      'components': path.resolve(__dirname, '../src/components')
     }
   },
   resolveLoader: {
