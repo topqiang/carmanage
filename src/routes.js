@@ -35,7 +35,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '用户管理',
+        name: '用户管理111',
         iconCls: 'el-icon-message',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
@@ -44,62 +44,62 @@ let routes = [
             { path: '/user', component: user, name: '列表' },
         ]
     },
-    // {
-    //     path: '/',
-    //     component: Home,
-    //     name: 'OBD状态管理',
-    //     iconCls: 'fa fa-id-card-o',
-    //     children: [
-    //         { path: '/page4', component: Page4, name: '页面4' },
-    //         { path: '/page5', component: Page5, name: '页面5' }
-    //     ]
-    // },
-    // {
-    //     path: '/',
-    //     component: CarManager,
-    //     name: '',
-    //     iconCls: 'fa fa-address-card',
-    //     leaf: true,//只有一个节点
-    //     children: [
-    //         { path: '/page6', component: Page6, name: '车辆记录管理' }
-    //     ]
-    // },
-    // {
-    //     path: '/',
-    //     component: Unlaw,
-    //     name: '违章查询管理',
-    //     iconCls: 'fa fa-bar-chart',
-    //     children: [
-    //         { path: '/echarts', component: echarts, name: 'echarts' }
-    //     ]
-    // },
-    // {
-    //     path: '/',
-    //     component: Sliders,
-    //     name: '轮播图管理',
-    //     iconCls: 'fa fa-bar-chart',
-    //     children: [
-    //         { path: '/echarts', component: echarts, name: 'echarts' }
-    //     ]
-    // },
-    // {
-    //     path: '/',
-    //     component: Article,
-    //     name: '文章管理',
-    //     iconCls: 'fa fa-bar-chart',
-    //     children: [
-    //         { path: '/echarts', component: echarts, name: 'echarts' }
-    //     ]
-    // },
-    // {
-    //     path: '/',
-    //     component: Admin,
-    //     name: '后台权限管理',
-    //     iconCls: 'fa fa-bar-chart',
-    //     children: [
-    //         { path: '/echarts', component: echarts, name: 'echarts' }
-    //     ]
-    // },
+    {
+        path: '/',
+        component: Home,
+        name: 'OBD状态管理',
+        iconCls: 'fa fa-id-card-o',
+        children: [
+            { path: '/page4', component: Page4, name: '页面4' },
+            { path: '/page5', component: Page5, name: '页面5' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/page6', component: Page6, name: '车辆记录管理' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '违章查询管理',
+        iconCls: 'fa fa-bar-chart',
+        children: [
+            { path: '/echarts', component: echarts, name: 'echarts' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '轮播图管理',
+        iconCls: 'fa fa-bar-chart',
+        children: [
+            { path: '/echarts', component: echarts, name: 'echarts' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '文章管理',
+        iconCls: 'fa fa-bar-chart',
+        children: [
+            { path: '/echarts', component: echarts, name: 'echarts' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '后台权限管理',
+        iconCls: 'fa fa-bar-chart',
+        children: [
+            { path: '/echarts', component: echarts, name: 'echarts' }
+        ]
+    },
     {
         path: '*',
         hidden: true,
