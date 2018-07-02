@@ -7,7 +7,8 @@ Vue.use(Vuex)
 
 // 应用初始状态
 const state = {
-    count: 10
+    count: 10,
+    e_id: sessionStorage.getItem('e_id') || ''
 }
 
 // 定义所需的 mutations
@@ -17,6 +18,14 @@ const mutations = {
     },
     DECREMENT(state) {
         state.count--
+    },
+    saveId(state, id) {
+        state.e_id = id
+        sessionStorage.setItem('e_id', id)
+    },
+    loginOut(state) {
+        state.e_id = ''
+        sessionStorage.removeItem('e_id')
     }
 }
 

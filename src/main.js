@@ -8,46 +8,56 @@ import VueRouter from 'vue-router'
 import store from './vuex/store'
 import Vuex from 'vuex'
 import NProgress from 'nprogress'
+//富文本
+import  VueQuillEditor from 'vue-quill-editor'
+
 import 'nprogress/nprogress.css'
 import routes from './routes'
-import Mock from './mock'
-Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
+//富文本样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
 window.$ = window.jQuery = require('jquery');
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(Vuex)
+Vue.use(VueQuillEditor)
 
-NProgress.configure({ showSpinner: false });
+NProgress.configure({
+  showSpinner: false
+});
 
 const router = new VueRouter({
-    routes
+  routes
 })
 
-router.beforeEach((to, from, next) => {
-    //NProgress.start();
-    if (to.path == '/login') {
-        sessionStorage.removeItem('user');
-    }
-    let user = JSON.parse(sessionStorage.getItem('user'));
-    if (!user && to.path != '/login') {
-        next({ path: '/login' })
-    } else {
-        next()
-    }
-})
+// router.beforeEach((to, from, next) => {
+//   //NProgress.start();
+//   if (to.path == '/login') {
+//     sessionStorage.removeItem('user');
+//   }
+//   let user = JSON.parse(sessionStorage.getItem('user'));
+//   if (!user && to.path != '/login') {
+//     next({
+//       path: '/login'
+//     })
+//   } else {
+//     next()
+//   }
+// })
 
 //router.afterEach(transition => {
 //NProgress.done();
 //});
 
 new Vue({
-    //el: '#app',
-    //template: '<App/>',
-    router,
-    store,
-    //components: { App }
-    render: h => h(App)
+  //el: '#app',
+  //template: '<App/>',
+  router,
+  store,
+  //components: { App }
+  render: h => h(App)
 }).$mount('#app')
